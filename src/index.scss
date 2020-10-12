@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans CJK JP Regular'), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype');
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !important;
+  color: rgba(0, 0, 0, 0.65);
+}
