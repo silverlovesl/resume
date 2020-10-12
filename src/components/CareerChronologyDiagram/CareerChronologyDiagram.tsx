@@ -72,7 +72,7 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
         singleAxisIndex: 0,
         coordinateSystem: 'singleAxis',
         type: 'scatter',
-        symbol: `image:///images/profile-small.png`,
+        symbol: `image://./images/profile-small.png`,
         symbolSize: 30,
         symbolOffset: [0, 65],
         data: [2009],
@@ -88,26 +88,26 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
         symbolOffset: [0, -20],
         type: 'scatter',
         data: [
-          { value: 2009, symbol: `image:///images/graduate.svg`, name: '2008年\n短大卒業', label: commonLabel },
-          { value: 2010 + 4 / 12, symbol: `image:///images/osaka.svg`, name: '2009/03~\n大阪-研修', label: commonLabel },
-          { value: 2011 + 4 / 12, symbol: `image:///images/shanghai.svg`, name: '2010/04~\n上海-オフショア', label: commonLabel },
-          { value: 2013 + 6 / 12, symbol: `image:///images/tokyo-tower.svg`, name: '2013/06~\n来日', label: commonLabel },
+          { value: 2009, symbol: `image://./images/graduate.svg`, name: '2008年\n短大卒業', label: commonLabel },
+          { value: 2010 + 4 / 12, symbol: `image://.//images/osaka.svg`, name: '2009/03~\n大阪-研修', label: commonLabel },
+          { value: 2011 + 4 / 12, symbol: `image://.//images/shanghai.svg`, name: '2010/04~\n上海-オフショア', label: commonLabel },
+          { value: 2013 + 6 / 12, symbol: `image://.//images/tokyo-tower.svg`, name: '2013/06~\n来日', label: commonLabel },
           {
             value: 2013 + 6 / 12,
-            symbol: `image:///images/SIer.svg`,
+            symbol: `image://./images/SIer.svg`,
             name: '2013/06~\nSIer',
             symbolOffset: [0, 30],
             label: { ...commonLabel, offset: [50, 0] },
           },
-          { value: 2017 + 4 / 12, symbol: `image:///images/igs-logo.png`, name: '2017/04~\nIGSに入社', label: commonLabel, symbolSize: 60 },
+          { value: 2017 + 4 / 12, symbol: `image://.//images/igs-logo.png`, name: '2017/04~\nIGSに入社', label: commonLabel, symbolSize: 60 },
           {
             value: 2017 + 4 / 12,
-            symbol: `image:///images/venture.svg`,
+            symbol: `image://./images/venture.svg`,
             name: '2017/04~\nベンチャー',
             symbolOffset: [0, 30],
             label: { ...commonLabel, offset: [50, 0] },
           },
-          { value: 2020, symbol: `image:///images/corona-virus.svg`, name: '2020~\nコロナーにより\n完全リモート', label: commonLabel },
+          { value: 2020, symbol: `image://.//images/corona-virus.svg`, name: '2020~\nコロナーにより\n完全リモート', label: commonLabel },
         ],
       },
     ],
@@ -128,8 +128,10 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
     if (data[0] > currentYear) {
       data[0] = 2009;
     }
-    const instance: ECharts = (careerCDChart as any).getEchartsInstance();
-    instance.setOption(careerCDChartOption);
+    if (careerCDChart) {
+      const instance: ECharts = (careerCDChart as any).getEchartsInstance();
+      instance.setOption(careerCDChartOption);
+    }
   }, 2000);
 
   return (

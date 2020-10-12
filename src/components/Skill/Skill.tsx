@@ -16,7 +16,7 @@ const Skill: React.FC<Props> = _ => {
       </h3>
       <Row gutter={gutter}>
         <Col span={6} className="g-text-center">
-          <Avatar src="/images/vue.svg" size={iconSize} />
+          <Avatar src="./images/vue.svg" size={iconSize} />
           <h5 className="g-ma-none">Vue</h5>
         </Col>
         <Col span={18}>
@@ -25,7 +25,7 @@ const Skill: React.FC<Props> = _ => {
       </Row>
       <Row gutter={gutter}>
         <Col span={6} className="g-text-center">
-          <Avatar src="/images/react.svg" size={iconSize} />
+          <Avatar src="./images/react.svg" size={iconSize} />
           <h5 className="g-ma-none">React</h5>
         </Col>
         <Col span={18}>
@@ -34,14 +34,14 @@ const Skill: React.FC<Props> = _ => {
       </Row>
       <Row gutter={gutter}>
         <Col span={6} className="g-text-center">
-          <Avatar src="/images/angular.svg" size={iconSize} />
+          <Avatar src="./images/angular.svg" size={iconSize} />
           <h5 className="g-ma-none">Angular</h5>
         </Col>
         <Col span={18}>
           <Progress percent={70} steps={10} format={() => '熟知'} status="normal" />
         </Col>
       </Row>
-      <span style={{ position: 'absolute', bottom: '-20px', right: '-4px' }}>
+      <span style={{ position: 'absolute', bottom: '-40px', right: '-4px' }}>
         <Button size="small" type="primary">
           詳細
         </Button>

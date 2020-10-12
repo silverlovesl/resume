@@ -11,15 +11,15 @@ const LanguageAbility: React.FC<Props> = _ => {
         語学力
       </h3>
       <List bordered={false}>
-        <List.Item actions={[<a>Native</a>]}>
+        <List.Item actions={[<a>ネイティブ</a>]}>
           <Avatar size={24} src="./images/flag/china.svg" className="g-mr-xs-force" />
           中文
         </List.Item>
-        <List.Item actions={[<a>Master</a>]}>
+        <List.Item actions={[<a>マスター</a>]}>
           <Avatar size={24} src="./images/flag/japan.svg" className="g-mr-xs-force" />
           日本語
         </List.Item>
-        <List.Item actions={[<a>Read/Write</a>]}>
+        <List.Item actions={[<a>読み・書き</a>]}>
           <Avatar size={24} src="./images/flag/united-states.svg" className="g-mr-xs-force" />
           English
         </List.Item>
