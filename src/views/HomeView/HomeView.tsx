@@ -14,7 +14,7 @@ import ProjectCareer from '../../components/ProjectCareer/ProjectCareer';
 import Accessment from '../../components/Accessment/Accessment';
 
 type Props = {} & RouteComponentProps;
-const HomeView: React.FC<Props> = () => {
+const HomeView: React.FC<Props> = prop => {
   return (
     <section className="home-view">
       <Row>
@@ -85,7 +85,7 @@ const HomeView: React.FC<Props> = () => {
             </Card.Grid>
             {/* プロジェクト */}
             <Card.Grid className="home-view__grid-item">
-              <ProjectCareer />
+              <ProjectCareer {...prop} />
             </Card.Grid>
             {/* ポートフォリオ */}
             <Card.Grid className="home-view__grid-item" style={{ background: '#364d79' }}>
