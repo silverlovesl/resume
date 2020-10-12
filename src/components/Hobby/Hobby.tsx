@@ -13,7 +13,7 @@ const Hobby: React.FC<Props> = _ => {
       <Row justify="center" gutter={16}>
         <Col span={24} className="g-text-center">
           <Avatar shape="square" src="./images/workout.svg" size={100} />
-          <Divider orientation="center" type="vertical" style={{ height: '150px' }} className="g-mx-md-force" />
+          <Divider orientation="center" type="vertical" style={{ height: '150px' }} className="g-mx-md-force bc-primary" />
           <Avatar shape="square" src="./images/badminton.svg" size={100} />
         </Col>
       </Row>

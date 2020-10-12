@@ -11,6 +11,7 @@ import Skill from '../../components/Skill/Skill';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import Hobby from '../../components/Hobby/Hobby';
 import ProjectCareer from '../../components/ProjectCareer/ProjectCareer';
+import Accessment from '../../components/Accessment/Accessment';
 
 type Props = {} & RouteComponentProps;
 const HomeView: React.FC<Props> = () => {
@@ -21,7 +22,7 @@ const HomeView: React.FC<Props> = () => {
           <Avatar src="./images/profile.png" size={140} />
           <Col span={24}></Col>
         </Col>
-        <Col span={12}>
+        <Col span={10}>
           <ruby className="g-fs-24 fc-gray-9">
             <span>夏 曄</span>
             <rt>
@@ -56,6 +57,9 @@ const HomeView: React.FC<Props> = () => {
             </Col>
           </Row>
         </Col>
+        <Col span={8} className="g-pl-lg">
+          <EducationBackground />
+        </Col>
       </Row>
       <Divider className="g-my-sm bc-primary" />
       <Row>
@@ -71,20 +75,20 @@ const HomeView: React.FC<Props> = () => {
             <Card.Grid className="home-view__grid-item">
               <LanguageAbility />
             </Card.Grid>
-            {/* 教育背景 */}
+            {/* 自己評価 */}
             <Card.Grid className="home-view__grid-item">
-              <EducationBackground />
+              <Accessment />
             </Card.Grid>
             {/* スキル */}
             <Card.Grid className="home-view__grid-item">
               <Skill />
             </Card.Grid>
-            {/* ポートフォリオ */}
+            {/* プロジェクト */}
             <Card.Grid className="home-view__grid-item">
               <ProjectCareer />
             </Card.Grid>
             {/* ポートフォリオ */}
-            <Card.Grid className="home-view__grid-item">
+            <Card.Grid className="home-view__grid-item" style={{ background: '#364d79' }}>
               <Portfolio />
             </Card.Grid>
             {/* 趣味 */}

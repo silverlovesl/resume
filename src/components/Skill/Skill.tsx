@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar, Button, Col, Progress, Row } from 'antd';
 import { Gutter } from 'antd/lib/grid/row';
+import { EyeFilled } from '@ant-design/icons';
 
 type Props = {};
 
@@ -42,7 +43,7 @@ const Skill: React.FC<Props> = _ => {
         </Col>
       </Row>
       <span style={{ position: 'absolute', bottom: '-40px', right: '-4px' }}>
-        <Button size="small" type="primary">
+        <Button size="small" type="primary" className="g-mt-md" icon={<EyeFilled />}>
           詳細
         </Button>
       </span>
