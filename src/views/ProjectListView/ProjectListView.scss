@@ -1,6 +1,17 @@
 .project-list-view {
+  position: relative;
+  padding-bottom: 4rem;
   .ant-list-lg .ant-list-item {
     border-bottom: 1px solid #1890ff !important;
+  }
+  .ant-list-vertical .ant-list-item-meta-title {
+    font-size: 18px !important;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
   }
 
   &__teck-list {
@@ -11,9 +22,10 @@
     > li {
       padding: 2px 0px;
       > label {
-        font-weight: bold;
+        vertical-align: top;
+        font-weight: bolder;
         display: inline-block;
-        min-width: 60px;
+        min-width: 80px;
         position: relative;
         &:after {
           display: block;
@@ -21,6 +33,13 @@
           top: 0;
           right: -4px;
         }
+      }
+      > p {
+        display: inline-block;
+        // white-space: pre-line;
+        word-wrap: break-word;
+        padding-left: 6px;
+        width: 550px;
       }
       > span {
         display: inline-block;

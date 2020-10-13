@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useState } from 'react';
 import { Avatar, Carousel } from 'antd';
 
 type Props = {};
@@ -32,7 +32,8 @@ const Portfolio: React.FC<Props> = _ => {
         </div>
         <div className="g-text-center">
           <a style={contentStyle}>
-            <video controls={false} autoPlay={true} height="180" src="images/portfolios/grow/IRT.mov"></video>
+            {/* <video controls={false} autoPlay={true} height="180" src="images/portfolios/grow/IRT.mov"></video> */}
+            <img className="g-full-height" src="./images/portfolios/grow/p1.png" />
           </a>
         </div>
         <div className="g-text-center">

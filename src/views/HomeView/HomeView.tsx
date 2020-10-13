@@ -57,9 +57,7 @@ const HomeView: React.FC<Props> = prop => {
             </Col>
           </Row>
         </Col>
-        <Col span={8} className="g-pl-lg">
-          <EducationBackground />
-        </Col>
+        <Col span={8} className="g-pl-lg"></Col>
       </Row>
       <Divider className="g-my-sm bc-primary" />
       <Row>
@@ -75,9 +73,10 @@ const HomeView: React.FC<Props> = prop => {
             <Card.Grid className="home-view__grid-item">
               <LanguageAbility />
             </Card.Grid>
-            {/* 自己評価 */}
+            {/* 教育背景 */}
             <Card.Grid className="home-view__grid-item">
-              <Accessment />
+              <EducationBackground />
+              {/* <Accessment /> */}
             </Card.Grid>
             {/* スキル */}
             <Card.Grid className="home-view__grid-item">
