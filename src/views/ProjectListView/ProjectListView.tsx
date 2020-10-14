@@ -3,8 +3,8 @@ import { RouteComponentProps } from 'react-router';
 import { List, Tag, Tooltip } from 'antd';
 import { LinkOutlined } from '@ant-design/icons';
 import './ProjectListView.scss';
-import { Affix, Avatar, Button, Image } from 'antd';
-import { UpOutlined } from '@ant-design/icons';
+import { Affix, Avatar, Button } from 'antd';
+import { UpOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 
 type Props = {} & RouteComponentProps;
 
@@ -28,7 +28,7 @@ interface Project {
   CI?: string;
 }
 
-const ProjectListView: React.FC<Props> = () => {
+const ProjectListView: React.FC<Props> = prop => {
   const [projects, setProjects] = useState([] as Project[]);
   const [top, setTop] = useState(20);
 
@@ -39,7 +39,10 @@ const ProjectListView: React.FC<Props> = () => {
 
   return (
     <section className="project-list-view">
-      <h1 className="project-list-view__title">案件履歴</h1>
+      <Button className="app__btn-back" type="link" icon={<ArrowLeftOutlined />} size="large" onClick={() => prop.history.push('/')}>
+        戻る
+      </Button>
+      <h1 className="app__page-title">案件履歴</h1>
       <List
         itemLayout="vertical"
         size="large"

@@ -1,0 +1,9 @@
+{
+  "summary": [
+    { "name": "Parkcinema 1000", "image": "./images/portfolios/parkcinema/p1.png" },
+    { "name": "Resource Dashboard", "image": "./images/portfolios/resource-dashboard/p1.png" },
+    { "name": "Grow", "image": "./images/portfolios/grow/p1.png" },
+    { "name": "KoKo", "image": "./images/portfolios/koko/p1.png" },
+    { "name": "Grid A.I.", "image": "./images/portfolios/grid-ai/p1.jpg" }
+  ]
+}

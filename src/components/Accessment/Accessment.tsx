@@ -1,59 +1,38 @@
-import React, { useState } from 'react';
-import { Avatar } from 'antd';
-import 'echarts-wordcloud';
-import ReactEcharts from 'echarts-for-react';
+import React from 'react';
+import { Avatar, Col, Progress, Row } from 'antd';
+import { Gutter } from 'antd/lib/grid/row';
 
 type Props = {};
 
 const Accessment: React.FC<Props> = _ => {
-  const [assessChartOption] = useState({
-    series: [
-      {
-        type: 'wordCloud',
-        left: 'center',
-        top: '-10%',
-        shape: '',
-        right: null,
-        bottom: null,
-        sizeRange: [12, 60],
-        gridSize: 8,
-        rotationRange: [-90, 90],
-        rotationStep: 45,
-        textStyle: {
-          normal: {
-            color: () => {
-              return 'rgb(' + [Math.round(Math.random() * 160), Math.round(Math.random() * 160), Math.round(Math.random() * 160)].join(',') + ')';
-            },
-          },
-          emphasis: {
-            shadowBlur: 10,
-            shadowColor: '#333',
-          },
-        },
-        data: [
-          { name: '仕事速い', value: 70 },
-          { name: '教え上手', value: 61 },
-          { name: '自分の意見を常に持っている', value: 66 },
-          { name: '新しい知識の取り入れ', value: 60 },
-          { name: '技術力', value: 36 },
-          { name: '親切心', value: 25 },
-          { name: '成長意欲が高い', value: 24 },
-          { name: '勉強家', value: 10 },
-          { name: '優しい', value: 6 },
-          { name: '英語力', value: 6 },
-        ],
-      },
-    ],
-  });
+  const gutter: [Gutter, Gutter] = [16, 4];
+  const iconSize = 24;
+
+  const assessments = [
+    { title: '開発力', percent: 100, image: './images/programming.svg' },
+    { title: '宣教力', percent: 80, image: './images/teaching.svg' },
+    { title: '統率力', percent: 50, image: './images/leadership.svg' },
+  ];
 
   return (
-    <div className="assessment g-pos-relative" style={{ height: '200px' }}>
+    <div className="skill g-pos-relative">
       <h3 className="g-mb-sm g-ma-none">
-        <Avatar size={24} className="g-mr-xs-force force-bc-info" src="./images/self-assessment.svg" />
-        自己・他者評価
+        <Avatar size={24} className="g-mr-xs-force force-bc-info" src="./images/assessment.svg" />
+        自己評価
       </h3>
-
-      <ReactEcharts option={assessChartOption} />
+      {assessments.map((item, i) => {
+        return (
+          <Row gutter={gutter} key={i}>
+            <Col span={6} className="g-text-center">
+              <Avatar src={item.image} shape="square" size={iconSize} />
+              <h5 className="g-ma-none">{item.title}</h5>
+            </Col>
+            <Col span={18} className="g-pt-xxs">
+              <Progress percent={item.percent} steps={10} format={v => `${v}点`} status="normal" />
+            </Col>
+          </Row>
+        );
+      })}
     </div>
   );
 };

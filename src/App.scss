@@ -1,1 +1,14 @@
 @import '~antd/dist/antd.css';
+
+.app {
+  &__btn-back {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  &__page-title {
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

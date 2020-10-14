@@ -2,10 +2,11 @@ import React from 'react';
 import { Avatar, Button, Col, Progress, Row } from 'antd';
 import { Gutter } from 'antd/lib/grid/row';
 import { EyeFilled } from '@ant-design/icons';
+import { RouteComponentProps } from 'react-router';
 
-type Props = {};
+type Props = {} & RouteComponentProps;
 
-const Skill: React.FC<Props> = _ => {
+const Skill: React.FC<Props> = prop => {
   const gutter: [Gutter, Gutter] = [16, 4];
   const iconSize = 24;
 
@@ -43,7 +44,7 @@ const Skill: React.FC<Props> = _ => {
         </Col>
       </Row>
       <span style={{ position: 'absolute', bottom: '-40px', right: '-4px' }}>
-        <Button size="small" type="primary" className="g-mt-md" icon={<EyeFilled />}>
+        <Button size="small" type="primary" className="g-mt-md" icon={<EyeFilled />} onClick={_ => prop.history.push('/skills')}>
           詳細
         </Button>
       </span>

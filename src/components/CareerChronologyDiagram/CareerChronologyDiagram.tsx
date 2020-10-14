@@ -89,9 +89,16 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
         type: 'scatter',
         data: [
           { value: 2009, symbol: `image://./images/graduate.svg`, name: '2008年\n短大卒業', label: commonLabel },
-          { value: 2010 + 4 / 12, symbol: `image://.//images/osaka.svg`, name: '2009/03~\n大阪-研修', label: commonLabel },
-          { value: 2011 + 4 / 12, symbol: `image://.//images/shanghai.svg`, name: '2010/04~\n上海-オフショア', label: commonLabel },
-          { value: 2013 + 6 / 12, symbol: `image://.//images/tokyo-tower.svg`, name: '2013/06~\n来日', label: commonLabel },
+          {
+            value: 2009 + 5 / 12,
+            symbol: `image://./images/algorithm.svg`,
+            name: '2009年\n専門学校卒業',
+            symbolOffset: [0, 30],
+            label: { ...commonLabel, offset: [60, 0] },
+          },
+          { value: 2010 + 4 / 12, symbol: `image://./images/osaka.svg`, name: '2009/03~\n大阪-研修', label: commonLabel },
+          { value: 2011 + 4 / 12, symbol: `image://./images/shanghai.svg`, name: '2010/04~\n上海-オフショア', label: commonLabel },
+          { value: 2013 + 6 / 12, symbol: `image://./images/tokyo-tower.svg`, name: '2013/06~\n来日', label: commonLabel },
           {
             value: 2013 + 6 / 12,
             symbol: `image://./images/SIer.svg`,
@@ -99,7 +106,7 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
             symbolOffset: [0, 30],
             label: { ...commonLabel, offset: [50, 0] },
           },
-          { value: 2017 + 4 / 12, symbol: `image://.//images/igs-logo.png`, name: '2017/04~\nIGSに入社', label: commonLabel, symbolSize: 60 },
+          { value: 2017 + 4 / 12, symbol: `image://./images/igs-logo.png`, name: '2017/04~\nIGSに入社', label: commonLabel, symbolSize: 60 },
           {
             value: 2017 + 4 / 12,
             symbol: `image://./images/venture.svg`,
@@ -107,7 +114,7 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
             symbolOffset: [0, 30],
             label: { ...commonLabel, offset: [50, 0] },
           },
-          { value: 2020, symbol: `image://.//images/corona-virus.svg`, name: '2020~\nコロナーにより\n完全リモート', label: commonLabel },
+          { value: 2020, symbol: `image://./images/corona-virus.svg`, name: '2020~\nコロナーにより\n完全リモート', label: commonLabel },
         ],
       },
     ],

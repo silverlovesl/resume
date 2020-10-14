@@ -1,13 +1,12 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Card, Col, Divider, Row } from 'antd';
+import { Card, Col, Divider, Row, Tag } from 'antd';
 import { PhoneFilled, MailFilled } from '@ant-design/icons';
 import Avatar from 'antd/lib/avatar/avatar';
 import './HomeView.scss';
 import CareerChronologyDiagram from '../../components/CareerChronologyDiagram/CareerChronologyDiagram';
 import LanguageAbility from '../../components/LanguageAbility/LanguageAbility';
 import EducationBackground from '../../components/EducationBackground/EducationBackground';
-import Skill from '../../components/Skill/Skill';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import Hobby from '../../components/Hobby/Hobby';
 import ProjectCareer from '../../components/ProjectCareer/ProjectCareer';
@@ -17,12 +16,12 @@ type Props = {} & RouteComponentProps;
 const HomeView: React.FC<Props> = prop => {
   return (
     <section className="home-view">
-      <Row>
+      <Row align="middle">
         <Col span={6} className="g-text-center">
           <Avatar src="./images/profile.png" size={140} />
           <Col span={24}></Col>
         </Col>
-        <Col span={10}>
+        <Col span={12}>
           <ruby className="g-fs-24 fc-gray-9">
             <span>夏 曄</span>
             <rt>
@@ -57,7 +56,14 @@ const HomeView: React.FC<Props> = prop => {
             </Col>
           </Row>
         </Col>
-        <Col span={8} className="g-pl-lg"></Col>
+        <Col span={6} className="g-pl-lg g-text-center">
+          <a onClick={() => prop.history.push('/skills')} className="g-text-center fc-primary">
+            <Avatar src="./images/skills.svg" shape="square" size={100} style={{ display: 'block', margin: '0 auto' }} />
+            <Tag color="blue" style={{ margin: '0 auto' }}>
+              スキルシート
+            </Tag>
+          </a>
+        </Col>
       </Row>
       <Divider className="g-my-sm bc-primary" />
       <Row>
@@ -76,11 +82,10 @@ const HomeView: React.FC<Props> = prop => {
             {/* 教育背景 */}
             <Card.Grid className="home-view__grid-item">
               <EducationBackground />
-              {/* <Accessment /> */}
             </Card.Grid>
             {/* スキル */}
             <Card.Grid className="home-view__grid-item">
-              <Skill />
+              <Accessment />
             </Card.Grid>
             {/* プロジェクト */}
             <Card.Grid className="home-view__grid-item">
