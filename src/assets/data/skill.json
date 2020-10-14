@@ -36,7 +36,8 @@
     "other": [
       { "name": "AWS", "value": [4, 3], "icon": "aws.svg", "iconSize": [30, 20] },
       { "name": "Jenkins", "value": [2, 5], "icon": "jenkins.svg", "iconSize": [30, 40] },
-      { "name": "Shell", "value": [10, 9], "icon": "shell.svg", "iconSize": [25, 20] }
+      { "name": "Shell", "value": [10, 9], "icon": "shell.svg", "iconSize": [25, 20] },
+      { "name": "Docker", "value": [4.5, 6], "icon": "docker.svg", "iconSize": [25, 20] }
     ]
   },
   "ranking": [

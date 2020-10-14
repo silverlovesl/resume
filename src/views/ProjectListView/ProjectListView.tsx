@@ -72,7 +72,7 @@ const ProjectListView: React.FC<Props> = prop => {
                 <Tag color={item.release ? tagColor : ''}>リリース</Tag>
               </label>,
             ]}
-            extra={<img src={item.image} style={{ maxWidth: '272px', height: '200px' }} />}
+            extra={<img loading="lazy" src={item.image} style={{ maxWidth: '272px', height: '200px' }} />}
           >
             <List.Item.Meta
               avatar={<Avatar shape="square" src="./images/project-career.svg" />}
