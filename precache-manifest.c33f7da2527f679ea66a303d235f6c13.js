@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23b356f35420332ef6996dc1708986b7",
+    "revision": "faaa0833bdcf1f0db4c2e514e195c82c",
     "url": "/resume/index.html"
   },
   {
@@ -8,20 +8,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume/static/css/5.284f3e3e.chunk.css"
   },
   {
-    "revision": "4b53d77f7f248c715019",
-    "url": "/resume/static/css/7.833d0333.chunk.css"
+    "revision": "e52219d1cb7af34518a2",
+    "url": "/resume/static/css/7.5efdae01.chunk.css"
   },
   {
     "revision": "07dc71a60d8f728e2d85",
     "url": "/resume/static/css/8.4187a381.chunk.css"
   },
   {
-    "revision": "b09d6847daabe51a57a7",
+    "revision": "119a1de462d0cc85b641",
     "url": "/resume/static/css/9.c302e47a.chunk.css"
   },
   {
-    "revision": "6f73f8f66fc7a4740488",
-    "url": "/resume/static/css/main.19284045.chunk.css"
+    "revision": "bc82caef3ea924ff4b16",
+    "url": "/resume/static/css/main.38e91d7c.chunk.css"
   },
   {
     "revision": "4f65ba1e73c7e7994804",
@@ -48,23 +48,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume/static/js/6.0db09005.chunk.js"
   },
   {
-    "revision": "4b53d77f7f248c715019",
-    "url": "/resume/static/js/7.7c37918e.chunk.js"
+    "revision": "e52219d1cb7af34518a2",
+    "url": "/resume/static/js/7.6a476f4e.chunk.js"
   },
   {
     "revision": "07dc71a60d8f728e2d85",
     "url": "/resume/static/js/8.160a1cb7.chunk.js"
   },
   {
-    "revision": "b09d6847daabe51a57a7",
-    "url": "/resume/static/js/9.90d08748.chunk.js"
+    "revision": "119a1de462d0cc85b641",
+    "url": "/resume/static/js/9.0db8f163.chunk.js"
   },
   {
-    "revision": "6f73f8f66fc7a4740488",
+    "revision": "bc82caef3ea924ff4b16",
     "url": "/resume/static/js/main.05f255df.chunk.js"
   },
   {
-    "revision": "862c090e38214703108d",
-    "url": "/resume/static/js/runtime-main.abccdeac.js"
+    "revision": "b2412333525d7a16c8ff",
+    "url": "/resume/static/js/runtime-main.82fc8291.js"
   }
 ]);
