@@ -38,5 +38,17 @@
       { "name": "Jenkins", "value": [2, 5], "icon": "jenkins.svg", "iconSize": [30, 40] },
       { "name": "Shell", "value": [10, 9], "icon": "shell.svg", "iconSize": [25, 20] }
     ]
-  }
+  },
+  "ranking": [
+    { "name": "フロントエンド", "score": 90 },
+    { "name": "バックエンド", "score": 75 },
+    { "name": "アルゴリズム", "score": 25 },
+    { "name": "データベース", "score": 60 },
+    { "name": "アーキテクチャデザイン", "score": 45 },
+    { "name": "インフラ", "score": 35 },
+    { "name": "UI/UX", "score": 88 },
+    { "name": "組込系", "score": 15 },
+    { "name": "ツール", "score": 40 },
+    { "name": "コミュニケーション", "score": 99 }
+  ]
 }

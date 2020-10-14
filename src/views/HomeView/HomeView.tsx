@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { Card, Col, Divider, Row, Tag } from 'antd';
-import { PhoneFilled, MailFilled } from '@ant-design/icons';
+import { PhoneFilled, MailFilled, EnvironmentFilled } from '@ant-design/icons';
 import Avatar from 'antd/lib/avatar/avatar';
 import './HomeView.scss';
 import CareerChronologyDiagram from '../../components/CareerChronologyDiagram/CareerChronologyDiagram';
@@ -46,13 +46,17 @@ const HomeView: React.FC<Props> = prop => {
           </ul>
           <Divider className="g-my-xs bc-primary" />
           <Row>
-            <Col span={12}>
+            <Col span={8}>
               <PhoneFilled className="g-mr-xxs" />
               <span>(080)-7936-8088</span>
             </Col>
-            <Col span={12}>
+            <Col span={10}>
               <MailFilled className="g-mr-xxs" />
               <span className="fc-primary">541074770@qq.com</span>
+            </Col>
+            <Col span={6}>
+              <EnvironmentFilled className="g-mr-xxs" />
+              <span>東京</span>
             </Col>
           </Row>
         </Col>
