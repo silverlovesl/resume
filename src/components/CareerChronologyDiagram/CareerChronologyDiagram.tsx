@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactEcharts from 'echarts-for-react';
 import { EChartOption, ECharts } from 'echarts';
 
@@ -24,45 +24,24 @@ const commonLabel = {
 
 const CareerChronologyDiagram: React.FC<Props> = _ => {
   const currentYear = new Date().getFullYear();
+  const [isSmallSizeDevice] = useState(window.screen.availWidth <= 500);
   let careerCDChart: any;
+  commonLabel.show = !isSmallSizeDevice;
+  const symbolOffset = !isSmallSizeDevice ? [0, -20] : [0, -40];
+
   const [careerCDChartOption] = useState({
-    title: {
-      top: 0,
-    },
-    grid: {
-      containLabel: true,
-      top: '0%',
-      left: '0%',
-      bottom: '0%',
-      right: '5%',
-    },
+    title: { top: 0 },
+    tooltip: { show: isSmallSizeDevice, formatter: (p: any) => p.name },
+    grid: { containLabel: true, top: '0%', left: '0%', bottom: '0%', right: '5%' },
     singleAxis: [
       {
         type: 'value',
         height: 180,
-        axisLine: {
-          lineStyle: {
-            width: 2,
-          },
-        },
-        axisTick: {
-          lineStyle: {
-            width: 2,
-          },
-        },
-        splitLine: {
-          show: false,
-        },
-        interval: 1,
-        axisLabel: {
-          show: true,
-          textStyle: {
-            fontSize: 14,
-            fontWeight: 'bold',
-          },
-          formatter: (v: number) => v,
-        },
-
+        axisLine: { lineStyle: { width: 2 } },
+        axisTick: { lineStyle: { width: 2 } },
+        splitLine: { show: false },
+        interval: isSmallSizeDevice ? 2 : 1,
+        axisLabel: { show: true, textStyle: { fontSize: 14, fontWeight: 'bold' }, formatter: (v: number) => v },
         min: 2009,
         max: currentYear,
       },
@@ -76,16 +55,13 @@ const CareerChronologyDiagram: React.FC<Props> = _ => {
         symbolSize: 30,
         symbolOffset: [0, 65],
         data: [2009],
-        itemStyle: {
-          borderColor: '#fa541c',
-          borderWidth: 20,
-        },
+        itemStyle: { borderColor: '#fa541c', borderWidth: 20 },
       },
       {
         singleAxisIndex: 0,
         coordinateSystem: 'singleAxis',
         symbolSize: 40,
-        symbolOffset: [0, -20],
+        symbolOffset: symbolOffset,
         type: 'scatter',
         data: [
           { value: 2009, symbol: `image://./images/graduate.svg`, name: '2008年\n短大卒業', label: commonLabel },

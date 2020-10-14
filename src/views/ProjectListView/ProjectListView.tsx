@@ -31,6 +31,7 @@ interface Project {
 const ProjectListView: React.FC<Props> = prop => {
   const [projects, setProjects] = useState([] as Project[]);
   const [top, setTop] = useState(20);
+  const tagColor = '#108ee9';
 
   useEffect(() => {
     const p = require('../../assets/data/project.json');
@@ -53,22 +54,22 @@ const ProjectListView: React.FC<Props> = prop => {
             key={item.id}
             actions={[
               <label>
-                <Tag color={item.basicDesign ? 'blue' : ''}>基本設計</Tag>
+                <Tag color={item.basicDesign ? tagColor : ''}>基本設計</Tag>
               </label>,
               <label>
-                <Tag color={item.detailedDesign ? 'blue' : ''}>詳細設計</Tag>
+                <Tag color={item.detailedDesign ? tagColor : ''}>詳細設計</Tag>
               </label>,
               <label>
-                <Tag color={item.implementation ? 'blue' : ''}>実装</Tag>
+                <Tag color={item.implementation ? tagColor : ''}>実装</Tag>
               </label>,
               <label>
-                <Tag color={item.unitTest ? 'blue' : ''}>単体テスト</Tag>
+                <Tag color={item.unitTest ? tagColor : ''}>単体テスト</Tag>
               </label>,
               <label>
-                <Tag color={item.integrationTest ? 'blue' : ''}>総合テスト</Tag>
+                <Tag color={item.integrationTest ? tagColor : ''}>総合テスト</Tag>
               </label>,
               <label>
-                <Tag color={item.release ? 'blue' : ''}>リリース</Tag>
+                <Tag color={item.release ? tagColor : ''}>リリース</Tag>
               </label>,
             ]}
             extra={<img src={item.image} style={{ maxWidth: '272px', height: '200px' }} />}

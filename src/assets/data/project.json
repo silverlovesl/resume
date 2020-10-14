@@ -36,7 +36,7 @@
         "gRPCによるマイクロサービス化進行中",
         "自分はこのプロジェクトで設計、ライブラリー選定、難易度の高い部分のプロトタイプ及び実装まで担当している"
       ],
-      "frontend": "Vue2.0, typescript, VantUI, And Design, fabricjs, ECharts, Angular, Primeng",
+      "frontend": "Vue2.0, typescript, VantUI, Ant Design, fabricjs, ECharts, Angular, Primeng",
       "backend": "Golang, Echo, Xorm, gRPC, Python, scikit-learn",
       "database": "MySQL",
       "CI": "git actions",

@@ -1,5 +1,5 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
-import { Avatar, Carousel } from 'antd';
+import { Avatar, Carousel, Image } from 'antd';
 
 type Props = {};
 

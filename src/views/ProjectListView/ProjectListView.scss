@@ -8,6 +8,16 @@
     font-size: 18px !important;
   }
 
+  .ant-list-item-action > li {
+    padding: 2px 4px;
+    em.ant-list-item-action-split {
+      display: none;
+    }
+    .ant-tag {
+      margin-right: 0;
+    }
+  }
+
   &__teck-list {
     margin: 0px;
     padding: 0px;
@@ -33,7 +43,7 @@
         // white-space: pre-line;
         word-wrap: break-word;
         padding-left: 6px;
-        width: 550px;
+        max-width: 550px;
       }
       > span {
         display: inline-block;
