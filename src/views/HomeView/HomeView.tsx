@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Card, Col, Divider, Row, Tag } from 'antd';
+import { Card, Col, Divider, Row, Tag, Tooltip } from 'antd';
 import { PhoneFilled, MailFilled, EnvironmentFilled } from '@ant-design/icons';
 import Avatar from 'antd/lib/avatar/avatar';
 import './HomeView.scss';
@@ -14,6 +14,8 @@ import Accessment from '../../components/Accessment/Accessment';
 
 type Props = {} & RouteComponentProps;
 const HomeView: React.FC<Props> = prop => {
+  const [age] = useState((new Date().getTime() - new Date(1987, 5, 5).getTime()) / (1000 * 3600 * 24 * 365));
+
   return (
     <section className="home-view">
       <h1 className="app__page-title">履歴</h1>
@@ -30,6 +32,7 @@ const HomeView: React.FC<Props> = prop => {
               <span className="g-ml-xs">ヨウ</span>
             </rt>
           </ruby>
+          <h5 className="fc-gray-6">The devil's in the detail</h5>
           <Divider className="g-my-xs bc-primary" />
           <ul className="home-view__profile-list">
             <li>
@@ -38,7 +41,7 @@ const HomeView: React.FC<Props> = prop => {
             </li>
             <li>
               <label>出生年月</label>
-              <span>1987-06-05</span>
+              <span>1987-06-05 ({age.toFixed(0)}歳)</span>
             </li>
             <li>
               <label>性别</label>
@@ -63,8 +66,9 @@ const HomeView: React.FC<Props> = prop => {
         </Col>
         <Col span={6} xs={24} sm={24} lg={6} xl={6} xxl={6} className="g-pl-lg g-text-center">
           <a onClick={() => prop.history.push('/skills')} className="g-text-center fc-primary">
-            <Avatar src="./images/skills.svg" shape="square" size={100} style={{ display: 'block', margin: '0 auto' }} />
-            <h4>スキルシート</h4>
+            <Tooltip title="スキルシート" defaultVisible={true}>
+              <Avatar src="./images/skills.svg" shape="square" size={100} style={{ display: 'block', margin: '0 auto' }} />
+            </Tooltip>
           </a>
         </Col>
       </Row>
