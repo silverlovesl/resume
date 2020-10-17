@@ -8,18 +8,21 @@ import jaJP from 'antd/es/locale/ja_JP';
 import zhCN from 'antd/es/locale/zh_CN';
 import enUS from 'antd/es/locale/en_US';
 import { ConfigProvider } from 'antd';
+import { StringUtils } from './utils/StringUtils';
+import { cookieService } from './services/cookie.service';
 
-let lang = window.navigator.language;
-let langCode = 'ja';
+let defaultLang = cookieService.language || StringUtils.browserLanguage();
 let antLang: any = jaJP;
-if (lang) {
-  if (lang.indexOf('zh') >= 0) {
+if (defaultLang) {
+  if (defaultLang === 'zh') {
     antLang = zhCN;
-    langCode = 'zh';
-  } else if (lang.indexOf('en') >= 0) {
+    defaultLang = 'zh';
+  } else if (defaultLang === 'en') {
     antLang = enUS;
-    langCode = 'en';
+    defaultLang = 'en';
   }
+
+  cookieService.language = defaultLang;
 }
 
 ReactDOM.render(

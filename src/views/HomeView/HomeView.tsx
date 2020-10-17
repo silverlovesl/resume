@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { CSSProperties, useState } from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Card, Col, Divider, Row, Tag, Tooltip } from 'antd';
+import { Card, Col, Divider, Row, Select, Tooltip, Avatar } from 'antd';
 import { PhoneFilled, MailFilled, EnvironmentFilled } from '@ant-design/icons';
-import Avatar from 'antd/lib/avatar/avatar';
-import './HomeView.scss';
 import CareerChronologyDiagram from '../../components/CareerChronologyDiagram/CareerChronologyDiagram';
 import LanguageAbility from '../../components/LanguageAbility/LanguageAbility';
 import EducationBackground from '../../components/EducationBackground/EducationBackground';
@@ -11,6 +9,16 @@ import Portfolio from '../../components/Portfolio/Portfolio';
 import Hobby from '../../components/Hobby/Hobby';
 import ProjectCareer from '../../components/ProjectCareer/ProjectCareer';
 import Accessment from '../../components/Accessment/Accessment';
+import './HomeView.scss';
+import { cookieService } from '../../services/cookie.service';
+
+const { Option } = Select;
+const languageBox = {
+  width: '150px',
+  position: 'absolute',
+  top: '8px',
+  right: '8px',
+} as CSSProperties;
 
 type Props = {} & RouteComponentProps;
 const HomeView: React.FC<Props> = prop => {
@@ -19,6 +27,16 @@ const HomeView: React.FC<Props> = prop => {
   return (
     <section className="home-view">
       <h1 className="app__page-title">履歴</h1>
+      {/* <Select style={languageBox} defaultValue={cookieService.language} onChange={v => (cookieService.language = v)}>
+        <Option key="zh" value="zh">
+          <Avatar size={18} src="./images/flag/china.svg" />
+          <span className="g-ml-xxs">中文</span>
+        </Option>
+        <Option key="ja" value="ja">
+          <Avatar size={18} src="./images/flag/japan.svg" />
+          <span className="g-ml-xxs">日本語</span>
+        </Option>
+      </Select> */}
       <Row align="middle">
         <Col span={6} xs={24} sm={24} md={6} lg={6} xl={6} xxl={6} className="g-text-center">
           <Avatar src="./images/profile.png" size={140} />
@@ -66,7 +84,7 @@ const HomeView: React.FC<Props> = prop => {
         </Col>
         <Col span={6} xs={24} sm={24} lg={6} xl={6} xxl={6} className="g-pl-lg g-text-center">
           <a onClick={() => prop.history.push('/skills')} className="g-text-center fc-primary">
-            <Tooltip title="スキルシート" defaultVisible={true}>
+            <Tooltip title="スキルシート" defaultVisible={true} placement="bottom">
               <Avatar src="./images/skills.svg" shape="square" size={100} style={{ display: 'block', margin: '0 auto' }} />
             </Tooltip>
           </a>
