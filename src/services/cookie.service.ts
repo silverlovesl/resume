@@ -1,8 +1,6 @@
 class CookieService {
   private readonly TIME_OUT = 24;
 
-  constructor() {}
-
   /**
    * Checks the existence of a single cookie by it's name
    *
@@ -42,7 +40,7 @@ class CookieService {
   public getAll(): any {
     let cookieService: any = {};
 
-    if (document.cookie && document.cookie != '') {
+    if (document.cookie && document.cookie !== '') {
       let split = document.cookie.split(';');
       for (let i = 0; i < split.length; i++) {
         let currCookie = split[i].split('=');
@@ -108,7 +106,7 @@ class CookieService {
     let cookieService: any = this.getAll();
 
     for (let cookieName in cookieService) {
-      if (exceptLang && cookieName == 'lang') {
+      if (exceptLang && cookieName === 'lang') {
         continue;
       }
       this.delete(cookieName, path, domain);

@@ -27,16 +27,18 @@ const HomeView: React.FC<Props> = prop => {
   return (
     <section className="home-view">
       <h1 className="app__page-title">履歴</h1>
-      {/* <Select style={languageBox} defaultValue={cookieService.language} onChange={v => (cookieService.language = v)}>
-        <Option key="zh" value="zh">
-          <Avatar size={18} src="./images/flag/china.svg" />
-          <span className="g-ml-xxs">中文</span>
-        </Option>
-        <Option key="ja" value="ja">
-          <Avatar size={18} src="./images/flag/japan.svg" />
-          <span className="g-ml-xxs">日本語</span>
-        </Option>
-      </Select> */}
+      {false && (
+        <Select style={languageBox} defaultValue={cookieService.language} onChange={v => (cookieService.language = v)}>
+          <Option key="zh" value="zh">
+            <Avatar size={18} src="./images/flag/china.svg" />
+            <span className="g-ml-xxs">中文</span>
+          </Option>
+          <Option key="ja" value="ja">
+            <Avatar size={18} src="./images/flag/japan.svg" />
+            <span className="g-ml-xxs">日本語</span>
+          </Option>
+        </Select>
+      )}
       <Row align="middle">
         <Col span={6} xs={24} sm={24} md={6} lg={6} xl={6} xxl={6} className="g-text-center">
           <Avatar src="./images/profile.png" size={140} />

@@ -17,3 +17,10 @@ export interface SkillRinkingItem {
   name: string;
   score: number;
 }
+
+export interface SkillListItem {
+  name: string;
+  contents?: string[];
+  avatar?: string;
+  tags?: string[];
+}

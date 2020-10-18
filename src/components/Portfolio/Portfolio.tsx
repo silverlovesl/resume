@@ -1,5 +1,5 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
-import { Avatar, Carousel, Image } from 'antd';
+import { Avatar, Carousel } from 'antd';
 
 type Props = {};
 
@@ -35,7 +35,7 @@ const Portfolio: React.FC<Props> = _ => {
         {portfolios.map((d, i) => {
           return (
             <div className="g-text-center" key={i}>
-              <a style={contentStyle}>
+              <a href="javascript:void(0);" target="#" style={contentStyle}>
                 <img className="g-full-height" src={d.image} alt={d.name} />
               </a>
             </div>

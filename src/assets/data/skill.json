@@ -40,16 +40,35 @@
       { "name": "Docker", "value": [4.5, 6], "icon": "docker.svg", "iconSize": [25, 20] }
     ]
   },
-  "ranking": [
+  "rankings": [
     { "name": "フロントエンド", "score": 90 },
     { "name": "バックエンド", "score": 75 },
     { "name": "アルゴリズム", "score": 25 },
     { "name": "データベース", "score": 60 },
-    { "name": "アーキテクチャデザイン", "score": 45 },
+    { "name": "アーキテクチャデザイン", "score": 70 },
     { "name": "インフラ", "score": 35 },
     { "name": "UI/UX", "score": 88 },
     { "name": "組込系", "score": 15 },
     { "name": "ツール", "score": 40 },
     { "name": "コミュニケーション", "score": 99 }
+  ],
+  "frameworks": [],
+  "others": [
+    {
+      "name": "Amazon Cloud Service",
+      "contents": ["AWSにSaas型サービスの構築経験有り"],
+      "avatar": "aws.svg",
+      "tags": ["API Gateway", "EC2", "Cloud Front", "Router53", "ALB", "CloudWatch", "CodeDeploy", "AWS Elastic Cache", "Lambda", "S3", "SES"]
+    },
+    { "name": "Jenkins", "contents": ["自動テスト環境構築経験有り", "自動デプロイ環境構築経験有り"], "avatar": "jenkins.svg", "tags": ["Jenkins"] },
+    { "name": "GitHub", "contents": ["ソースコード管理", "CI/CD"], "avatar": "github.svg", "tags": ["git", "git actions"] },
+    {
+      "name": "Atlassian",
+      "contents": ["アジャイルプロセス管理", "タスク進捗管理", "ドキュメント管理", "ソース管理"],
+      "avatar": "atlassian.svg",
+      "tags": ["JIRA", "Confluence", "Bit Bucket"]
+    },
+    { "name": "Docker", "contents": ["各種開発環境構築経験有り"], "avatar": "docker.svg", "tags": ["Docker image", "Docker composer"] },
+    { "name": "Slack", "contents": ["日常仕事のやり取り時使用"], "avatar": "slack.svg", "tags": ["Slack", "Slack API連携"] }
   ]
 }

@@ -72,7 +72,7 @@ const ProjectListView: React.FC<Props> = prop => {
                 <Tag color={item.release ? tagColor : ''}>リリース</Tag>
               </label>,
             ]}
-            extra={<img loading="lazy" src={item.image} style={{ maxWidth: '272px', height: '200px' }} />}
+            extra={<img loading="lazy" src={item.image} style={{ maxWidth: '272px', height: '200px' }} alt={item.title} />}
           >
             <List.Item.Meta
               avatar={<Avatar shape="square" src="./images/project-career.svg" />}
@@ -82,7 +82,7 @@ const ProjectListView: React.FC<Props> = prop => {
                   {`${index + 1}. ${item.title}`}
                   {item.url && (
                     <Tooltip title="Go to site">
-                      <a className="force-fc-primary" href={item.url} target="_blank">
+                      <a className="force-fc-primary" href={item.url} target="_blank" rel="noopener noreferrer">
                         <LinkOutlined />
                       </a>
                     </Tooltip>

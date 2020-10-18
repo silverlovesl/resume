@@ -35,7 +35,7 @@ const SkillLanguageMap: React.FC<Props> = prop => {
   const iconDefaultSize = [20, 20];
   const currentYear = new Date().getFullYear();
 
-  const series = ['Frontend', 'Backend', 'Framework', 'Database', 'Other'];
+  const series = ['Frontend', 'Backend', 'Framework', 'Database'];
   const [languageSkillChartOption] = useState({
     // backgroundColor: '#f7f8fa',
     title: { text: '言語マップ' },
@@ -45,11 +45,11 @@ const SkillLanguageMap: React.FC<Props> = prop => {
     yAxis: { name: '熟練度', max: 10, ...languageSkillChartAxisCommon },
     color: ['#f5222d', '#1890ff', '#fadb14', '#52c41a', '#8c8c8c'],
     tooltip: {
-      axisPointer: {
-        show: true,
-        type: 'cross',
-        lineStyle: { width: 1 },
-      },
+      // axisPointer: {
+      //   show: true,
+      //   type: 'cross',
+      //   lineStyle: { width: 1 },
+      // },
       formatter: (param: any) => {
         console.log(param);
         const year = param.data.value[0];
@@ -72,9 +72,9 @@ const SkillLanguageMap: React.FC<Props> = prop => {
         case 'database':
           data = prop.dataSource.database;
           break;
-        case 'other':
-          data = prop.dataSource.other;
-          break;
+        // case 'other':
+        //   data = prop.dataSource.other;
+        //   break;
       }
       return {
         name: s,
