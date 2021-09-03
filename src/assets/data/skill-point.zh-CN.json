@@ -1,0 +1,34 @@
+{
+  "skillPoints": [
+    {
+      "lang": "Golang",
+      "icon": "gopher.svg",
+      "desc": ["RestfulAPI框架: gin,echo", "ORM框架: xorm, gorm", "go-redis", "PRC框架: go-thrift,Google protobuf", "高并发系统构建"]
+    },
+    {
+      "lang": "Java",
+      "icon": "java.svg",
+      "desc": ["J2EE", "RestfulAPI框架: SpringBoot2", "ORM框架: MyBatis,Herbinate", "DI: Spring, EJB"]
+    },
+    {
+      "lang": "MySQL",
+      "icon": "mysql.svg",
+      "desc": ["高性可扩容性数据库设计", "千万级数据库性能优化", "SQL性能优化"]
+    },
+    {
+      "lang": "React",
+      "icon": "react.svg",
+      "desc": ["状态管理: Mobx, Redux", "SSR/SSG: Nextjs", "UI框架: Ant Desing, Material UI"]
+    },
+    {
+      "lang": "Vue",
+      "icon": "vue.svg",
+      "desc": ["状态管理: Vuex", "SSR/SSG: Nuxtjs", "UI框架: Ant Desing, Element UI", "环境: Vite"]
+    },
+    {
+      "lang": "Docker",
+      "icon": "docker.svg",
+      "desc": ["CLI", "Container", "Image"]
+    }
+  ]
+}

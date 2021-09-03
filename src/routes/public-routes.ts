@@ -4,6 +4,7 @@ import { RouteProps } from 'react-router';
 const HomeView = React.lazy(() => import('../views/HomeView/HomeView'));
 const ProjectListView = React.lazy(() => import('../views/ProjectListView/ProjectListView'));
 const SkillView = React.lazy(() => import('../views/SkillView/SkillView'));
+const ResumePDFView = React.lazy(() => import('../views/ResumePDFView/ResumePDFView'));
 
 export default {
   root: {
@@ -17,5 +18,9 @@ export default {
   skills: {
     component: SkillView,
     path: '/skills',
+  } as RouteProps,
+  resume: {
+    component: ResumePDFView,
+    path: '/resume',
   } as RouteProps,
 };

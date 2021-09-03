@@ -4,7 +4,9 @@ import ReactEcharts from 'echarts-for-react';
 import { SkillLanguargeMap, SkillLanguargeMapItem } from '../../models/skill';
 
 type Props = {
+  title?: string;
   dataSource: SkillLanguargeMap;
+  axis?: { xLabel: string; yLabel: string };
 };
 
 const languageSkillChartAxisCommon = {
@@ -38,11 +40,11 @@ const SkillLanguageMap: React.FC<Props> = prop => {
   const series = ['Frontend', 'Backend', 'Framework', 'Database'];
   const [languageSkillChartOption] = useState({
     // backgroundColor: '#f7f8fa',
-    title: { text: '言語マップ' },
+    title: { text: prop.title || '言語マップ' },
     legend: { right: 100, top: 35 },
     grid: { containLabel: false, top: 70, bottom: 20 },
-    xAxis: { name: '経験年数', max: currentYear - startYear, ...languageSkillChartAxisCommon },
-    yAxis: { name: '熟練度', max: 10, ...languageSkillChartAxisCommon },
+    xAxis: { name: prop.axis?.xLabel || '経験年数', max: currentYear - startYear, ...languageSkillChartAxisCommon },
+    yAxis: { name: prop.axis?.yLabel || '熟練度', max: 10, ...languageSkillChartAxisCommon },
     color: ['#f5222d', '#1890ff', '#fadb14', '#52c41a', '#8c8c8c'],
     tooltip: {
       // axisPointer: {
@@ -54,7 +56,7 @@ const SkillLanguageMap: React.FC<Props> = prop => {
         console.log(param);
         const year = param.data.value[0];
         const level = param.data.value[1];
-        return `${param.data.name}<br/>経験年数: ${year}年<br/>熟練度: ${level}P`;
+        return `${param.data.name}<br/>${prop.axis?.xLabel || '経験年数'}: ${year}年<br/>${prop.axis?.yLabel || '熟練度'}: ${level}P`;
       },
     },
     series: series.map(s => {

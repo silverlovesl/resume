@@ -5,28 +5,9 @@ import { LinkOutlined } from '@ant-design/icons';
 import './ProjectListView.scss';
 import { Affix, Avatar, Button } from 'antd';
 import { UpOutlined, ArrowLeftOutlined } from '@ant-design/icons';
+import { Project } from '../../models';
 
 type Props = {} & RouteComponentProps;
-
-interface Project {
-  id: number;
-  title: string;
-  url?: string;
-  description: string;
-  detail: string[];
-  basicDesign?: boolean;
-  detailedDesign?: boolean;
-  implementation?: boolean;
-  unitTest?: boolean;
-  integrationTest?: boolean;
-  release?: boolean;
-  image?: string;
-  frontend?: string;
-  backend?: string;
-  database?: string;
-  other?: string;
-  CI?: string;
-}
 
 const ProjectListView: React.FC<Props> = prop => {
   const [projects, setProjects] = useState([] as Project[]);

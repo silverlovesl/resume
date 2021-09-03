@@ -19,7 +19,7 @@
       { "name": "Swift", "value": [4, 5.8], "icon": "swift.svg" },
       { "name": "Kotlin", "value": [1, 4], "icon": "kotlin.svg" },
       { "name": "PHP", "value": [2, 6.4], "icon": "php.svg", "iconSize": [45, 20] },
-      { "name": "Rust", "value": [0.5, 1], "icon": "rust.svg" }
+      { "name": "Rust", "value": [1, 1], "icon": "rust.svg" }
     ],
     "database": [
       { "name": "Mysql", "value": [5, 8], "icon": "mysql.svg" },
