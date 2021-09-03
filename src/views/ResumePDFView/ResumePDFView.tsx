@@ -32,12 +32,12 @@ const ResumePDFView: React.FC<Props> = props => {
   }, []);
 
   return (
-    <article>
+    <article className="resume-pdf-view">
       <Typography>
         <Title>个人简历</Title>
       </Typography>
       <Divider className="g-my-xs" />
-      <Row>
+      <Row className="g-mt-sm">
         <Col span={24}>
           <Badge.Ribbon text="基本信息" placement="start">
             <Card bodyStyle={cardBodyStyle}>
@@ -59,14 +59,14 @@ const ResumePDFView: React.FC<Props> = props => {
                   </Descriptions>
                 </Col>
                 <Col span={4}>
-                  <Avatar src={myAvatar} size={140} />
+                  <Avatar src={myAvatar} size={130} />
                 </Col>
               </Row>
             </Card>
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row>
+      <Row className="g-mt-sm">
         <Col span={24}>
           <Badge.Ribbon text="自我介绍" placement="start" color="#434343">
             <Card bodyStyle={cardBodyStyle}>
@@ -86,7 +86,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row>
+      <Row className="g-mt-sm">
         <Col span={24}>
           <Badge.Ribbon text="教育・职历" placement="start" color="lime">
             <Card bodyStyle={cardBodyStyle}>
@@ -102,7 +102,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row>
+      <Row className="g-mt-sm">
         <Col span={24}>
           <Badge.Ribbon text="语言能力" placement="start" color="magenta">
             <Card bodyStyle={cardBodyStyle}>
@@ -135,7 +135,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row className="page-break">
+      <Row className="g-mt-sm page-break">
         <Col span={24}>
           <Badge.Ribbon text="技术特长&amp;优势" placement="start" color="volcano">
             <Card>
@@ -158,7 +158,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row className="page-break">
+      <Row className="g-mt-sm page-break">
         <Col span={24} className="page-break">
           <Badge.Ribbon text="项目经验" placement="start" color="orange">
             <Card bodyStyle={cardBodyStyle}>
@@ -210,7 +210,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row className="page-break">
+      <Row className="g-mt-sm page-break">
         <Col span={24}>
           <Badge.Ribbon text="技能树" placement="start" color="purple">
             <Card bodyStyle={cardBodyStyle}>
@@ -219,7 +219,7 @@ const ResumePDFView: React.FC<Props> = props => {
           </Badge.Ribbon>
         </Col>
       </Row>
-      <Row className="page-break">
+      <Row className="g-mt-sm page-break">
         <Col span={24}>
           <Badge.Ribbon text="生活爱好" placement="start" color="#13c2c2">
             <Card bodyStyle={cardBodyStyle}>
@@ -228,19 +228,19 @@ const ResumePDFView: React.FC<Props> = props => {
                   <Title level={3}>撸铁</Title>
                   <Text mark>卧推: 150kg　深蹲: 140kg　硬拉: 180kg</Text>
                   <div className="g-mt-sm"></div>
-                  <Avatar shape="square" src="./images/life/muscle.jpg" size={300} />
+                  <Avatar shape="square" src="./images/life/muscle.jpg" size={240} />
                 </Col>
                 <Col span={8} className="g-text-center">
-                  <Title level={3}>Coding</Title>
+                  <Title level={3}>写程序</Title>
                   <Text mark>用HHKB没有菜鸟，懂得自然懂</Text>
                   <div className="g-mt-sm"></div>
-                  <Avatar shape="square" src="./images/life/coding.jpg" size={300} />
+                  <Avatar shape="square" src="./images/life/coding.jpg" size={240} />
                 </Col>
                 <Col span={8} className="g-text-center">
                   <Title level={3}>游戏</Title>
                   <Text mark>抵制盗版，这是一种态度</Text>
                   <div className="g-mt-sm"></div>
-                  <Avatar shape="square" src="./images/life/game.jpg" size={300} />
+                  <Avatar shape="square" src="./images/life/game.jpg" size={240} />
                 </Col>
               </Row>
             </Card>

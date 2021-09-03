@@ -1,5 +1,8 @@
-@media print {
-  .page-break {
-    page-break-before: always !important;
+.resume-pdf-view {
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;
+  @media print {
+    .page-break {
+      page-break-before: always !important;
+    }
   }
 }

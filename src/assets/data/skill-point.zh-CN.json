@@ -26,6 +26,21 @@
       "desc": ["状态管理: Vuex", "SSR/SSG: Nuxtjs", "UI框架: Ant Desing, Element UI", "环境: Vite"]
     },
     {
+      "lang": "Angular",
+      "icon": "angular.svg",
+      "desc": ["通信: RxJS", "UI框架: Primeng"]
+    },
+    {
+      "lang": "Flutter",
+      "icon": "flutter.svg",
+      "desc": ["OS: iOS,Android", "状态管理: Provider, Riverpod"]
+    },
+    {
+      "lang": "Rust",
+      "icon": "rust.svg",
+      "desc": ["RestfulAPI: actix-web,rocket", "ORM: diesel", "rust-redis"]
+    },
+    {
       "lang": "Docker",
       "icon": "docker.svg",
       "desc": ["CLI", "Container", "Image"]
