@@ -1,4 +1,4 @@
-import { Badge, Card, Col, Descriptions, Divider, Row, Timeline, Tooltip, Typography, Avatar, List, Tag, Space } from 'antd';
+import { Badge, Card, Col, Descriptions, Divider, Row, Timeline, Typography, Avatar, List, Tag } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 import myAvatar from '../../assets/images/avatar.jpeg';
@@ -18,7 +18,7 @@ interface SkillPoint {
   desc: string[];
 }
 
-const ResumePDFView: React.FC<Props> = props => {
+const ResumePDFView: React.FC<Props> = _ => {
   const skillData = require('../../assets/data/skill.json');
   const skillPointData = require('../../assets/data/skill-point.zh-CN.json');
   const [skillLanguageMapData] = useState(skillData.skills as SkillLanguargeMap);
@@ -79,7 +79,7 @@ const ResumePDFView: React.FC<Props> = props => {
                 <li>技术全面单挑实力强，独立和日本客户谈项目一个人可以完成整个项目的开发，测试，上线</li>
                 <li>永远对技术充满好奇心以及学习热情，掌握市面上大部分主流开发技术(C++除外)</li>
                 <li>手速快，开发效率奇高，一个月同时干过4个项目</li>
-                <li>有过技术讲师经验，理解新人常见问题已经痛点</li>
+                <li>有过技术讲师经验，理解新人常见问题以及痛点</li>
                 <li className="fc-primary">坚信技术宅能够拯救世界</li>
               </ul>
             </Card>
@@ -92,7 +92,7 @@ const ResumePDFView: React.FC<Props> = props => {
             <Card bodyStyle={cardBodyStyle}>
               <Timeline>
                 <Timeline.Item dot={<DashboardOutlined />}>2018.6 ~ 现今　　(日) 株式会社Institution for a Global Society</Timeline.Item>
-                <Timeline.Item dot={<DashboardOutlined />}>2013.6 ~ 2009.5　(日) 株式会社PowerStar</Timeline.Item>
+                <Timeline.Item dot={<DashboardOutlined />}>2013.6 ~ 2018.5　(日) 株式会社PowerStar</Timeline.Item>
                 <Timeline.Item dot={<DashboardOutlined />}>2010.4 ~ 2013.6　(中) 上海NCS计算机信息有限公司</Timeline.Item>
                 <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2009.3 ~ 2010.3　日本大阪日语研修</Timeline.Item>
                 <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2008.1 ~ 2009.1　在校期间软件开发培训</Timeline.Item>

@@ -21,6 +21,6 @@ export default {
   } as RouteProps,
   resume: {
     component: ResumePDFView,
-    path: '/resume',
+    path: '/pdf-view',
   } as RouteProps,
 };
