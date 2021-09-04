@@ -3,7 +3,7 @@
     {
       "lang": "Golang",
       "icon": "gopher.svg",
-      "desc": ["RestfulAPI框架: gin,echo", "ORM框架: xorm, gorm", "go-redis", "PRC框架: go-thrift,Google protobuf", "高并发系统构建"]
+      "desc": ["RestfulAPI框架: gin,echo", "ORM框架: xorm, gorm", "go-redis", "RPC框架: go-thrift,Google protobuf", "高并发系统构建"]
     },
     {
       "lang": "Java",

@@ -42,7 +42,10 @@ const ResumePDFView: React.FC<Props> = props => {
           <Badge.Ribbon text="基本信息" placement="start">
             <Card bodyStyle={cardBodyStyle}>
               <Row>
-                <Col span={20}>
+                <Col lg={5} xs={24} sm={24} md={5} className="g-text-center">
+                  <Avatar shape="square" src={myAvatar} size={130} />
+                </Col>
+                <Col lg={19} xs={24} sm={24} md={19}>
                   <Descriptions>
                     <Descriptions.Item label="姓名">夏 晔 (xià yè)</Descriptions.Item>
                     <Descriptions.Item label="性别">男</Descriptions.Item>
@@ -57,9 +60,6 @@ const ResumePDFView: React.FC<Props> = props => {
                       <span className="fc-primary">目前人在东京，2021年11月预定回国</span>
                     </Descriptions.Item>
                   </Descriptions>
-                </Col>
-                <Col span={4}>
-                  <Avatar src={myAvatar} size={130} />
                 </Col>
               </Row>
             </Card>
@@ -76,9 +76,9 @@ const ResumePDFView: React.FC<Props> = props => {
                 </li>
                 <li>旅居日本多年，日语接近母语水平，有多年与日方商务谈判经验</li>
                 <li>开发经丰富，在团队一直担当Tech Leader</li>
-                <li>单挑实力强，独立和日本客户谈项目一个人可以完成整个项目的开发，测试，上线</li>
+                <li>技术全面单挑实力强，独立和日本客户谈项目一个人可以完成整个项目的开发，测试，上线</li>
                 <li>永远对技术充满好奇心以及学习热情，掌握市面上大部分主流开发技术(C++除外)</li>
-                <li>手速快，开发效率奇高，一个月同时干活4个项目</li>
+                <li>手速快，开发效率奇高，一个月同时干过4个项目</li>
                 <li>有过技术讲师经验，理解新人常见问题已经痛点</li>
                 <li className="fc-primary">坚信技术宅能够拯救世界</li>
               </ul>
@@ -107,14 +107,14 @@ const ResumePDFView: React.FC<Props> = props => {
           <Badge.Ribbon text="语言能力" placement="start" color="magenta">
             <Card bodyStyle={cardBodyStyle}>
               <Row gutter={[16, 16]}>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/china.svg" />
                   <ul className="g-text-left">
                     <li>母语</li>
                     <li>2年公司内部培训讲师经验</li>
                   </ul>
                 </Col>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/japan.svg" className="g-mr-xs-force" />
                   <ul className="g-text-left">
                     <li>日语1级，大学时参加过日语配音活动</li>
@@ -122,7 +122,7 @@ const ResumePDFView: React.FC<Props> = props => {
                     <li>可独立处理日常生活以及商务谈判</li>
                   </ul>
                 </Col>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/united-states.svg" className="g-mr-xs-force" />
                   <ul className="g-text-left">
                     <li>熟练读写开发类技术文档</li>
@@ -146,7 +146,7 @@ const ResumePDFView: React.FC<Props> = props => {
                   <List.Item>
                     <List.Item.Meta
                       avatar={<img src={`./images/programming-language/${item.icon}`} style={{ width: '30px' }} />}
-                      title={<h3>{item.lang}</h3>}
+                      title={<b className="g-fs-16">{item.lang}</b>}
                       description={item.desc.map(d => (
                         <Tag>{d}</Tag>
                       ))}
@@ -224,19 +224,19 @@ const ResumePDFView: React.FC<Props> = props => {
           <Badge.Ribbon text="生活爱好" placement="start" color="#13c2c2">
             <Card bodyStyle={cardBodyStyle}>
               <Row>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Title level={3}>撸铁</Title>
                   <Text mark>卧推: 150kg　深蹲: 140kg　硬拉: 180kg</Text>
                   <div className="g-mt-sm"></div>
                   <Avatar shape="square" src="./images/life/muscle.jpg" size={240} />
                 </Col>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Title level={3}>写程序</Title>
                   <Text mark>用HHKB没有菜鸟，懂得自然懂</Text>
                   <div className="g-mt-sm"></div>
                   <Avatar shape="square" src="./images/life/coding.jpg" size={240} />
                 </Col>
-                <Col span={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
                   <Title level={3}>游戏</Title>
                   <Text mark>抵制盗版，这是一种态度</Text>
                   <div className="g-mt-sm"></div>
