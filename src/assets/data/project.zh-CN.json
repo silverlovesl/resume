@@ -12,9 +12,9 @@
         "初期开发阶段MVC模式单体All in one API。后期随着项目扩大并发数量增加，运用gRPC技术将项目拆分为微服务。"
       ],
       "frontend": "Vue2.0, typescript, VantUI, Ant Design, fabricjs, ECharts",
-      "backend": "Golang, Echo, Xorm, gRPC, Python, scikit-learn",
+      "backend": "Golang, Echo, Xorm, gRPC, Python, scikit-learn, redis, RabbitMQ",
       "database": "MySQL",
-      "CI": "git actions",
+      "CI": "github actions",
       "other": "AWS, Chrome Headless ",
       "basicDesign": true,
       "detailedDesign": true,

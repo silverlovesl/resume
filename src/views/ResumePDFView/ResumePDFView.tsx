@@ -5,7 +5,18 @@ import myAvatar from '../../assets/images/avatar.jpeg';
 import SkillLanguageMap from '../../components/Skill/SkillLanguageMap';
 import { Project, SkillLanguargeMap } from '../../models';
 import '../ProjectListView/ProjectListView.scss';
-import { ReadOutlined, DashboardOutlined } from '@ant-design/icons';
+import {
+  ReadOutlined,
+  DashboardOutlined,
+  CoffeeOutlined,
+  DotChartOutlined,
+  ExperimentOutlined,
+  PieChartOutlined,
+  CodeOutlined,
+  BgColorsOutlined,
+  ApiOutlined,
+  ConsoleSqlOutlined,
+} from '@ant-design/icons';
 import './index.scss';
 
 const { Title, Text } = Typography;
@@ -36,7 +47,6 @@ const ResumePDFView: React.FC<Props> = _ => {
       <Typography>
         <Title>个人简历</Title>
       </Typography>
-      <Divider className="g-my-xs" />
       <Row className="g-mt-sm">
         <Col span={24}>
           <Badge.Ribbon text="基本信息" placement="start">
@@ -72,7 +82,7 @@ const ResumePDFView: React.FC<Props> = _ => {
             <Card bodyStyle={cardBodyStyle}>
               <ul>
                 <li>
-                  学历不是很高，但是计算机基础扎实，开发经验丰富<span className="fc-danger">(不是外包，不是外包，不是外包)</span>
+                  计算机基础扎实，开发经验丰富<span className="fc-danger">(不是外包，不是外包，不是外包)</span>
                 </li>
                 <li>旅居日本多年，日语接近母语水平，有多年与日方商务谈判经验</li>
                 <li>开发经丰富，在团队一直担当Tech Leader</li>
@@ -107,14 +117,14 @@ const ResumePDFView: React.FC<Props> = _ => {
           <Badge.Ribbon text="语言能力" placement="start" color="magenta">
             <Card bodyStyle={cardBodyStyle}>
               <Row gutter={[16, 16]}>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/china.svg" />
                   <ul className="g-text-left">
                     <li>母语</li>
                     <li>2年公司内部培训讲师经验</li>
                   </ul>
                 </Col>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/japan.svg" className="g-mr-xs-force" />
                   <ul className="g-text-left">
                     <li>日语1级，大学时参加过日语配音活动</li>
@@ -122,7 +132,7 @@ const ResumePDFView: React.FC<Props> = _ => {
                     <li>可独立处理日常生活以及商务谈判</li>
                   </ul>
                 </Col>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Avatar size={24} src="./images/flag/united-states.svg" className="g-mr-xs-force" />
                   <ul className="g-text-left">
                     <li>熟练读写开发类技术文档</li>
@@ -137,8 +147,36 @@ const ResumePDFView: React.FC<Props> = _ => {
       </Row>
       <Row className="g-mt-sm page-break">
         <Col span={24}>
-          <Badge.Ribbon text="技术特长&amp;优势" placement="start" color="volcano">
+          <Badge.Ribbon text="优势&amp;技术特长" placement="start" color="volcano">
             <Card>
+              <div className="g-py-sm">
+                <Card title="优势" size="small">
+                  <Card.Grid className="g-text-center">
+                    <CoffeeOutlined className="g-fs-56" style={{ color: '#fa8c16' }} />
+                    <div className="g-pt-sm">独立开发者，自我学习，开拓能力</div>
+                  </Card.Grid>
+                  <Card.Grid className="g-text-center">
+                    <CodeOutlined className="g-fs-56" style={{ color: '#595959' }} />
+                    <div className="g-pt-sm">命令行玩得溜</div>
+                  </Card.Grid>
+                  <Card.Grid className="g-text-center">
+                    <BgColorsOutlined className="g-fs-56" style={{ color: '#eb2f96' }} />
+                    <div className="g-pt-sm">UI设计开发</div>
+                  </Card.Grid>
+                  <Card.Grid className="g-text-center">
+                    <ApiOutlined className="g-fs-56" style={{ color: '#1890ff' }} />
+                    <div className="g-pt-sm">架构设计，开发</div>
+                  </Card.Grid>
+                  <Card.Grid className="g-text-center">
+                    <ConsoleSqlOutlined className="g-fs-56" style={{ color: '#f5222d' }} />
+                    <div className="g-pt-sm">性能优化</div>
+                  </Card.Grid>
+                  <Card.Grid className="g-text-center">
+                    <PieChartOutlined className="g-fs-56" style={{ color: '#52c41a' }} />
+                    <div className="g-pt-sm">数据可视化</div>
+                  </Card.Grid>
+                </Card>
+              </div>
               <List
                 itemLayout="horizontal"
                 dataSource={skillPoints}
@@ -224,19 +262,19 @@ const ResumePDFView: React.FC<Props> = _ => {
           <Badge.Ribbon text="生活爱好" placement="start" color="#13c2c2">
             <Card bodyStyle={cardBodyStyle}>
               <Row>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Title level={3}>撸铁</Title>
                   <Text mark>卧推: 150kg　深蹲: 140kg　硬拉: 180kg</Text>
                   <div className="g-mt-sm"></div>
                   <Avatar shape="square" src="./images/life/muscle.jpg" size={240} />
                 </Col>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Title level={3}>写程序</Title>
                   <Text mark>用HHKB没有菜鸟，懂得自然懂</Text>
                   <div className="g-mt-sm"></div>
                   <Avatar shape="square" src="./images/life/coding.jpg" size={240} />
                 </Col>
-                <Col lg={8} xs={24} sm={24} md={8} className="g-text-center">
+                <Col lg={8} xs={24} sm={8} md={8} className="g-text-center">
                   <Title level={3}>游戏</Title>
                   <Text mark>抵制盗版，这是一种态度</Text>
                   <div className="g-mt-sm"></div>
