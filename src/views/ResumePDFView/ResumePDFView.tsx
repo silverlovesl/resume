@@ -9,8 +9,6 @@ import {
   ReadOutlined,
   DashboardOutlined,
   CoffeeOutlined,
-  DotChartOutlined,
-  ExperimentOutlined,
   PieChartOutlined,
   CodeOutlined,
   BgColorsOutlined,
@@ -52,10 +50,10 @@ const ResumePDFView: React.FC<Props> = _ => {
           <Badge.Ribbon text="基本信息" placement="start">
             <Card bodyStyle={cardBodyStyle}>
               <Row>
-                <Col lg={5} xs={24} sm={24} md={5} className="g-text-center">
+                <Col lg={5} xs={24} sm={5} md={5} className="g-text-center">
                   <Avatar shape="square" src={myAvatar} size={130} />
                 </Col>
-                <Col lg={19} xs={24} sm={24} md={19}>
+                <Col lg={19} xs={24} sm={19} md={19}>
                   <Descriptions>
                     <Descriptions.Item label="姓名">夏 晔 (xià yè)</Descriptions.Item>
                     <Descriptions.Item label="性别">男</Descriptions.Item>
