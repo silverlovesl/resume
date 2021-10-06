@@ -55,12 +55,13 @@ const ResumePDFView: React.FC<Props> = _ => {
                 </Col>
                 <Col lg={19} xs={24} sm={19} md={19}>
                   <Descriptions>
+                    <Descriptions></Descriptions>
                     <Descriptions.Item label="姓名">夏 晔 (xià yè)</Descriptions.Item>
                     <Descriptions.Item label="性别">男</Descriptions.Item>
                     <Descriptions.Item label="出生年月">1987-06-05</Descriptions.Item>
                     <Descriptions.Item label="出生地">上海</Descriptions.Item>
                     <Descriptions.Item label="电话">17521134477</Descriptions.Item>
-                    <Descriptions.Item label="邮箱">541075770@qq.com</Descriptions.Item>
+                    <Descriptions.Item label="邮箱">1541075770@qq.com</Descriptions.Item>
                     <Descriptions.Item label="微信">yin1037</Descriptions.Item>
                     <Descriptions.Item label="工作年限">9年</Descriptions.Item>
                     <Descriptions.Item label="求职岗位">Golang后端开发</Descriptions.Item>
@@ -80,7 +81,7 @@ const ResumePDFView: React.FC<Props> = _ => {
             <Card bodyStyle={cardBodyStyle}>
               <ul>
                 <li>
-                  计算机基础扎实，开发经验丰富<span className="fc-danger">(不是外包，不是外包，不是外包)</span>
+                  计算机基础扎实，开发经验丰富<span className="fc-danger">(费外派类)</span>
                 </li>
                 <li>旅居日本多年，日语接近母语水平，有多年与日方商务谈判经验</li>
                 <li>开发经丰富，在团队一直担当Tech Leader</li>
@@ -88,7 +89,7 @@ const ResumePDFView: React.FC<Props> = _ => {
                 <li>永远对技术充满好奇心以及学习热情，掌握市面上大部分主流开发技术(C++除外)</li>
                 <li>手速快，开发效率奇高，一个月同时干过4个项目</li>
                 <li>有过技术讲师经验，理解新人常见问题以及痛点</li>
-                <li className="fc-primary">坚信技术宅能够拯救世界</li>
+                {/* <li className="fc-primary">坚信技术宅能够拯救世界</li> */}
               </ul>
             </Card>
           </Badge.Ribbon>

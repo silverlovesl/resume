@@ -8,7 +8,7 @@
       "description": "通过AI来做个人的性格推断，气质分析。为企业再招募新人是提供可视化的判断依据",
       "detail": [
         "公司内部SaaS型产品",
-        "所为作为技术Leader带领团队开发。主要负责项目架构搭建、技术指导、进度与品控",
+        "作为技术Leader带领团队开发。主要负责项目架构搭建、技术指导、进度与品控",
         "初期开发阶段MVC模式单体All in one API。后期随着项目扩大并发数量增加，运用gRPC技术将项目拆分为微服务。"
       ],
       "frontend": "Vue2.0, typescript, VantUI, Ant Design, fabricjs, ECharts",
@@ -48,7 +48,7 @@
       "url": "https://koko-net.jp/",
       "image": "./images/portfolios/koko/p2.png",
       "description": "不同国家的孩子在游乐设施中，通过Beacon来了解孩子的亲密度",
-      "detail": ["私人项目，做一个最终数据可视化的报表"],
+      "detail": ["做一个最终数据可视化的报表"],
       "frontend": "Vue2.0, typescript",
       "backend": "Golang, echo, xorm",
       "database": "MySQL",
@@ -67,7 +67,7 @@
       "url": "https://lang-resource.grow-360.com/login",
       "image": "./images/portfolios/resource-dashboard/p1.png",
       "description": "项目需要多国语言，开发组与翻译组共享JSON文件时常发生冲突和遗漏",
-      "detail": ["纯个人项目", "期初在开组内部使用，后推广到运维，翻译组广泛使用"],
+      "detail": ["业余时间开发的一个多语言管理工具", "期初在开组内部使用，后推广到运维，翻译组广泛使用"],
       "frontend": "Angular 6.0, Primeng",
       "backend": "Golang, echo, xorm",
       "database": "MySQL",
