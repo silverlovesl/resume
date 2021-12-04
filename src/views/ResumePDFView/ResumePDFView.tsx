@@ -1,5 +1,5 @@
 import { Badge, Card, Col, Descriptions, Divider, Row, Timeline, Typography, Avatar, List, Tag } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 import myAvatar from '../../assets/images/avatar.jpeg';
 import SkillLanguageMap from '../../components/Skill/SkillLanguageMap';
@@ -34,6 +34,12 @@ const ResumePDFView: React.FC<Props> = _ => {
   const [skillPoints] = useState(skillPointData.skillPoints as SkillPoint[]);
   const cardBodyStyle = { marginTop: '1.5rem', paddingBottom: '0.5rem' } as React.CSSProperties;
   const [projects, setProjects] = useState([] as Project[]);
+
+  const gridStyle: CSSProperties = {
+    width: window.innerWidth < 576 ? '50%' : '25',
+    textAlign: 'center',
+    height: window.innerWidth < 576 ? 160 : 'auto',
+  };
 
   useEffect(() => {
     const p = require('../../assets/data/project.zh-CN.json');
@@ -81,7 +87,7 @@ const ResumePDFView: React.FC<Props> = _ => {
             <Card bodyStyle={cardBodyStyle}>
               <ul>
                 <li>
-                  计算机基础扎实，开发经验丰富<span className="fc-danger">(费外派类)</span>
+                  计算机基础扎实，开发经验丰富<span className="fc-danger">(非外派类)</span>
                 </li>
                 <li>旅居日本多年，日语接近母语水平，有多年与日方商务谈判经验</li>
                 <li>开发经丰富，在团队一直担当Tech Leader</li>
@@ -150,27 +156,27 @@ const ResumePDFView: React.FC<Props> = _ => {
             <Card>
               <div className="g-py-sm">
                 <Card title="优势" size="small">
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <CoffeeOutlined className="g-fs-56" style={{ color: '#fa8c16' }} />
                     <div className="g-pt-sm">独立开发者，自我学习，开拓能力</div>
                   </Card.Grid>
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <CodeOutlined className="g-fs-56" style={{ color: '#595959' }} />
                     <div className="g-pt-sm">命令行玩得溜</div>
                   </Card.Grid>
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <BgColorsOutlined className="g-fs-56" style={{ color: '#eb2f96' }} />
                     <div className="g-pt-sm">UI设计开发</div>
                   </Card.Grid>
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <ApiOutlined className="g-fs-56" style={{ color: '#1890ff' }} />
                     <div className="g-pt-sm">架构设计，开发</div>
                   </Card.Grid>
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <ConsoleSqlOutlined className="g-fs-56" style={{ color: '#f5222d' }} />
                     <div className="g-pt-sm">性能优化</div>
                   </Card.Grid>
-                  <Card.Grid className="g-text-center">
+                  <Card.Grid style={gridStyle}>
                     <PieChartOutlined className="g-fs-56" style={{ color: '#52c41a' }} />
                     <div className="g-pt-sm">数据可视化</div>
                   </Card.Grid>
