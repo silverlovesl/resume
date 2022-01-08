@@ -1,6 +1,7 @@
 {
   "skills": {
     "frontend": [
+      { "name": "tailwind.css", "value": [2, 9], "icon": "tailwindcss.svg" },
       { "name": "Vue", "value": [4, 9.5], "icon": "vue.svg" },
       { "name": "React", "value": [4, 8], "icon": "react.svg" },
       { "name": "Angular", "value": [3, 6.5], "icon": "angular.svg" },

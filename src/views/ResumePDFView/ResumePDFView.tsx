@@ -61,19 +61,15 @@ const ResumePDFView: React.FC<Props> = _ => {
                 </Col>
                 <Col lg={19} xs={24} sm={19} md={19}>
                   <Descriptions>
-                    <Descriptions></Descriptions>
                     <Descriptions.Item label="姓名">夏 晔 (xià yè)</Descriptions.Item>
                     <Descriptions.Item label="性别">男</Descriptions.Item>
                     <Descriptions.Item label="出生年月">1987-06-05</Descriptions.Item>
                     <Descriptions.Item label="出生地">上海</Descriptions.Item>
                     <Descriptions.Item label="电话">17521134477</Descriptions.Item>
-                    <Descriptions.Item label="邮箱">1541075770@qq.com</Descriptions.Item>
+                    <Descriptions.Item label="邮箱">541075770@qq.com</Descriptions.Item>
                     <Descriptions.Item label="微信">yin1037</Descriptions.Item>
                     <Descriptions.Item label="工作年限">9年</Descriptions.Item>
-                    <Descriptions.Item label="求职岗位">Golang后端开发</Descriptions.Item>
-                    <Descriptions.Item label="备注">
-                      <span className="fc-primary">目前人在东京，2021年11月预定回国</span>
-                    </Descriptions.Item>
+                    <Descriptions.Item label="求职岗位">全栈</Descriptions.Item>
                   </Descriptions>
                 </Col>
               </Row>
@@ -106,12 +102,12 @@ const ResumePDFView: React.FC<Props> = _ => {
           <Badge.Ribbon text="教育・职历" placement="start" color="lime">
             <Card bodyStyle={cardBodyStyle}>
               <Timeline>
-                <Timeline.Item dot={<DashboardOutlined />}>2018.6 ~ 现今　　(日) 株式会社Institution for a Global Society</Timeline.Item>
+                <Timeline.Item dot={<DashboardOutlined />}>2018.6 ~ 2021.10 (日) 株式会社Institution for a Global Society(已上市)</Timeline.Item>
                 <Timeline.Item dot={<DashboardOutlined />}>2013.6 ~ 2018.5　(日) 株式会社PowerStar</Timeline.Item>
                 <Timeline.Item dot={<DashboardOutlined />}>2010.4 ~ 2013.6　(中) 上海NCS计算机信息有限公司</Timeline.Item>
                 <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2009.3 ~ 2010.3　日本大阪日语研修</Timeline.Item>
                 <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2008.1 ~ 2009.1　在校期间软件开发培训</Timeline.Item>
-                <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2005.9 ~ 2008.7　上海建峰职业技术学院　　大专　　商务日语专业</Timeline.Item>
+                <Timeline.Item dot={<ReadOutlined className="force-fc-danger" />}>2005.9 ~ 2008.7　上海建峰职业技术学院(大专)商务日语专业</Timeline.Item>
               </Timeline>
             </Card>
           </Badge.Ribbon>
@@ -142,7 +138,7 @@ const ResumePDFView: React.FC<Props> = _ => {
                   <ul className="g-text-left">
                     <li>熟练读写开发类技术文档</li>
                     <li>简单日常会话</li>
-                    <li>Github，Stack Overflow， Redit 常客</li>
+                    <li>Github，Stack Overflow 常客</li>
                   </ul>
                 </Col>
               </Row>

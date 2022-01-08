@@ -33,6 +33,7 @@ const languageSkillChartLabelCommon = {
 };
 
 const SkillLanguageMap: React.FC<Props> = prop => {
+  console.log(JSON.stringify(prop.dataSource));
   const startYear = 2010;
   const iconDefaultSize = [20, 20];
   const currentYear = new Date().getFullYear();
